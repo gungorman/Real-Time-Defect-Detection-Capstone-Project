@@ -6,7 +6,6 @@ figures/*
 
 *.csv
 *.h5
-*.pt
 *.ckpt
 *.zip
 *.tar
