@@ -4,7 +4,7 @@ model: yolov8s.pt
 data: data/data.yaml
 epochs: 200
 time: null
-patience: 10
+patience: 100
 batch: 16
 imgsz: 640
 save: true
@@ -13,7 +13,7 @@ cache: false
 device: '0'
 workers: 8
 project: runs/detect
-name: train_final
+name: train_final2
 exist_ok: false
 pretrained: true
 optimizer: AdamW
@@ -87,7 +87,7 @@ hsv_h: 0.015
 hsv_s: 0.7
 hsv_v: 0.4
 degrees: 0.0
-translate: 0.4
+translate: 0.2
 scale: 0.5
 shear: 0.0
 perspective: 0.0
@@ -103,4 +103,4 @@ auto_augment: randaugment
 erasing: 0.4
 cfg: null
 tracker: botsort.yaml
-save_dir: C:\Users\User\Documents\GitHub\Real-Time-Defect-Detection-Capstone-Project\runs\detect\train_final
+save_dir: C:\Users\User\Documents\GitHub\Real-Time-Defect-Detection-Capstone-Project\runs\detect\train_final2
