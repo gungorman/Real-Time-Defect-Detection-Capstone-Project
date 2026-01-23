@@ -1,8 +1,14 @@
 data/*
 !data/.gitkeep
 
-figures/*
-!figures/.gitkeep
+runs/**
+!runs/**/.gitkeep
+
+runs/gridsearch_final/**
+!runs/gridsearch_final/.gitkeep
+
+runs/gridsearch_final_new/**
+!runs/gridsearch_final_new/.gitkeep
 
 *.csv
 *.h5

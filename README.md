@@ -4,6 +4,27 @@ YOLOv8-based object detection system for identifying common FDM print defects in
 
 ---
 
+## Motivation
+
+Fused Filament Fabrication (FFF) in 3D printing is widely used in rapid prototyping and low-volume manufacturing, yet print failures due to defects can lead to material waste, machine downtime, and increased production costs. Manual monitoring is inefficient and error-prone.
+
+This project aims to develop a real-time computer vision system capable of automatically detecting common FDM print defects during the printing process, enabling early intervention and improved print reliability.
+
+---
+
+## System Overview
+
+The overall pipeline of the project is as follows:
+
+1. Images are collected from FFF printing processes which are already made as datasets
+2. Defects are annotated using bounding boxes in YOLO format
+3. The dataset is split into training, validation, and test sets
+4. YOLOv8 models are trained using transfer learning
+5. Hyperparameters are tuned via grid search using validation performance
+6. The best model is selected and evaluated on a held-out test set
+7. The final model is used for real-time inference on GPU hardware
+
+---
 ## Features
 
 - Real-time defect detection using **YOLOv8**
@@ -63,6 +84,34 @@ README.md
 
 ---
 
+## Hyperparameter Tuning
+
+A reproducible grid search was conducted to optimize model performance. The following hyperparameters were explored:
+
+- Learning rate
+- Weight decay
+- Box loss
+- Classification loss
+- Number of frozen layers
+
+Model selection was based exclusively on validation performance to avoid test set leakage.
+
+---
+
+## Evaluation Metrics
+
+Model performance is evaluated using YOLO-style metrics:
+
+- **mAP@50**
+- **mAP@50–95**
+- Precision
+- Recall
+- Per-class Average Precision
+
+All final metrics are reported on a held-out test set that was not used during training or hyperparameter selection.
+
+---
+
 ## Environment
 
 The experiments in this project were conducted using the following hardware and software environment.
@@ -95,13 +144,50 @@ The experiments in this project were conducted using the following hardware and 
 
 ---
 
-## Part 1 - Preprocessing
-1) Import the dataset to the "data/" file. For the training data it's "train_data" and for testing it's "test_data".
-2) Run the data_splitter.py to make train, validation and test dataset splits.
-3) Run the FIRST FIVE cells in the training_loop.ipynb to complete the preprocessing part
+## Project Workflow
 
-## Part 2 - Hyperparameter Tuning
-1) Run the NEXT THREE cells in the training_loop.ipynb to finish the hyperparameter tuning
+### Part 1 – Preprocessing
 
-## Part 3 - Training and Validation
-1) Run the NEXT THREE cells in the training_loop.ipynb to setup the training process, train the baseline model and evaluate it on the validation dataset.
+- Import the dataset into the `data/` directory  
+  - Training data: `train_data`
+  - Testing data: `test_data`
+- Run `data_splitter.py` to generate train, validation, and test splits
+- Run the **first five cells** in `training_loop.ipynb` to complete preprocessing
+
+### Part 2 – Hyperparameter Tuning
+
+- Run the **next three cells** in `training_loop.ipynb` to perform hyperparameter tuning
+
+### Part 3 – Training and Validation
+
+- Run the **next three cells** in `training_loop.ipynb` to:
+  - Set up the training configuration
+  - Train the baseline model
+  - Evaluate performance on the validation dataset
+
+### Part 4 – Testing and Evaluation
+
+- Run the remaining cells in `training_loop.ipynb` to:
+  - Evaluate the final model on the test set
+  - Generate quantitative metrics and qualitative results
+- Final metrics are stored in:
+  - `runs/detect/test_metrics`
+- Predicted images are stored in:
+  - `runs/detect/test`
+
+---
+
+## Example Results
+
+Example detection results, including predicted bounding boxes and defect classes, can be found in `runs/detect/test`:
+
+INSERT PICTURE
+
+These visualizations demonstrate the model’s ability to localize and classify multiple defect types under varying print conditions.
+
+---
+
+## Acknowledgments
+
+- Ultralytics YOLOv8 framework
+- Project supervisors and dataset contributors
