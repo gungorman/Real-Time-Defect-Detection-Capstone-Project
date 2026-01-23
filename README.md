@@ -152,7 +152,7 @@ The experiments in this project were conducted using the following hardware and 
   - Training data: `train_data`
   - Testing data: `test_data`
 - Run `data_splitter.py` to generate train, validation, and test splits
-- Run the **first five cells** in `training_loop.ipynb` to complete preprocessing
+- Run the **first six cells** in `training_loop.ipynb` to complete preprocessing
 
 ### Part 2 – Hyperparameter Tuning
 
