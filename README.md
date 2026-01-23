@@ -118,15 +118,11 @@ All final metrics are reported on a held-out test set that was not used during t
 
 The experiments in this project were conducted using the following hardware and software environment.
 
----
-
 ### Hardware
 
 - GPU: NVIDIA GeForce RTX 4060 Laptop GPU (8 GB VRAM)
 - CPU: x86_64 architecture
 - RAM: 32 GB
-
----
 
 ### Software
 
@@ -135,8 +131,6 @@ The experiments in this project were conducted using the following hardware and 
 - PyTorch: 2.5.1 (CUDA-enabled)
 - CUDA: 12.1
 - Ultralytics YOLOv8: 8.x
-
----
 
 ### Notes
 
@@ -190,6 +184,21 @@ Example detection results, including predicted bounding boxes and defect classes
 </p>
 
 These visualizations demonstrate the model’s ability to localize and classify multiple defect types under varying print conditions.
+
+---
+
+## Limitations and Future Work
+
+### Limitations
+
+- Some images in the dataset are affected by motion blur or focus issues, which reduce defect visibility and negatively impact detection accuracy.
+- Variations in camera setups, including camera angle, distance, resolution, and lighting conditions, introduce domain shifts that limit model generalization across different printing environments.
+
+### Future Work
+
+- Expand the dataset to include a broader range of filament colors, materials, and lighting conditions.
+- Apply image enhancement or blur-robust training techniques to mitigate the impact of low-quality images.
+- Standardize camera placement or apply domain adaptation techniques to improve robustness across different camera setups.
 
 ---
 
