@@ -188,9 +188,12 @@ The experiments in this project were conducted using the following hardware and 
 Example detection results, including predicted bounding boxes and defect classes, can be found in `runs/detect/test`:
 
 <p align="center">
-  <img src="runs/detect/test/0fd8cfb0-left_photo_85_2024-10-09_18-09-58.jpg" width="360">
-  <img src="runs/detect/test/6a1e82a6-left_260photo_2024-10-04T11_24_27-418248.jpg" width="360">
-  <img src="runs/detect/test/7e58c855-left_photo_359_2024-10-30_12-24-56.jpg" width="360">
+  <img src="runs/detect/test/0fd8cfb0-left_photo_85_2024-10-09_18-09-58.jpg" width="450">
+  <img src="runs/detect/test/6a1e82a6-left_260photo_2024-10-04T11_24_27-418248.jpg" width="450">
+  <img src="runs/detect/test/7e58c855-left_photo_359_2024-10-30_12-24-56.jpg" width="450">
+  <img src="runs/detect/test/c7a653cf-right_108photo_2024-10-02T14_37_41-86109.jpg" width="450">
+  <img src="runs/detect/test/c89b581e-left_photo_210_2024-10-28_11-15-40.jpg" width="450">
+  <img src="runs/detect/test/437c47d6-244photo_2024-08-22T15_46_01-913419.jpg" width="450">
 </p>
 
 These visualizations demonstrate the model’s ability to localize and classify multiple defect types under varying print conditions.
