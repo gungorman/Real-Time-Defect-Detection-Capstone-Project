@@ -57,30 +57,31 @@ The overall pipeline of the project is as follows:
 
 ## Project Structure
 
-  data/
-    train/
-      images/
-      labels/
-    val/
-      images/
-      labels/
-    test/
-      images/
-      labels/
-    data.yaml
-  runs/
-      detect/
-          train_final/
-          val/
-          test/
-          test_metrics/
-      gridsearch/
-      final_gridsearch
-  scripts/
-      data_splitter.py
-      training_loop.ipynb
-      Change class.py
-  README.md
+```text
+data/
+  train/
+    images/
+    labels/
+  val/
+    images/
+    labels/
+  test/
+    images/
+    labels/
+  data.yaml
+runs/
+    detect/
+        train_final/
+        val/
+        test/
+        test_metrics/
+    gridsearch/
+    final_gridsearch
+scripts/
+    data_splitter.py
+    training_loop.ipynb
+    Change class.py
+README.md
 
 ---
 
