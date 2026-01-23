@@ -8,7 +8,7 @@ YOLOv8-based object detection system for identifying common FDM print defects in
 
 Fused Filament Fabrication (FFF) in 3D printing is widely used in rapid prototyping and low-volume manufacturing, yet print failures due to defects can lead to material waste, machine downtime, and increased production costs. Manual monitoring is inefficient and error-prone.
 
-This project aims to develop a real-time computer vision system capable of automatically detecting common FDM print defects during the printing process, enabling early intervention and improved print reliability.
+This project aims to develop a real-time computer vision system capable of automatically detecting common FFF print defects during the printing process, enabling early intervention and improved print reliability.
 
 ---
 
@@ -22,13 +22,12 @@ The overall pipeline of the project is as follows:
 4. YOLOv8 models are trained using transfer learning
 5. Hyperparameters are tuned via grid search using validation performance
 6. The best model is selected and evaluated on a held-out test set
-7. The final model is used for real-time inference on GPU hardware
 
 ---
 ## Features
 
 - Real-time defect detection using **YOLOv8**
-- Support for multiple FDM defect classes
+- Support for multiple FFF defect classes
 - GPU-accelerated training and inference
 - Modular **training, validation, and testing** pipeline
 - Reproducible **hyperparameter grid search**
@@ -90,11 +89,16 @@ README.md
 
 A reproducible grid search was conducted to optimize model performance. The following hyperparameters were explored:
 
-- Learning rate
-- Weight decay
-- Box loss
-- Classification loss
-- Number of frozen layers
+- Learning rate:
+  - Initial learning rate. Adjusting this value is crucial for the optimization process, influencing how rapidly model weights are updated. 
+- Weight decay:
+  - L2 regularization term, penalizing large weights to prevent overfitting. 
+- Box loss weight:
+  - Weight of the box loss component in the loss function, influencing how much emphasis is placed on accurately predicting bounding box coordinates. 
+- Classification loss weight:
+  - Weight of the classification loss in the total loss function, affecting the importance of correct class prediction relative to other components.
+- Number of frozen layers:
+  - This grid is for picking the optimum number of frozen layers on the backbone of the model with layer 9 being the last layer of the backbone. This can be visualized in the image below. 
 
 Model selection was based exclusively on validation performance to avoid test set leakage.
 
@@ -199,6 +203,7 @@ These visualizations demonstrate the model’s ability to localize and classify 
 - Expand the dataset to include a broader range of filament colors, materials, and lighting conditions.
 - Apply image enhancement or blur-robust training techniques to mitigate the impact of low-quality images.
 - Standardize camera placement or apply domain adaptation techniques to improve robustness across different camera setups.
+- The model can be deployed to enable real-time defect detection.
 
 ---
 
