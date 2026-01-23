@@ -206,3 +206,11 @@ These visualizations demonstrate the model’s ability to localize and classify 
 
 - Ultralytics YOLOv8 framework
 - Project supervisors and dataset contributors
+
+
+This project is made by:
+- Lucas Garcia Gomez
+- Utku Dinç
+- Emre Gungor
+- Jan Molenaar
+- Mark Pellegrom
