@@ -151,25 +151,25 @@ The experiments in this project were conducted using the following hardware and 
 ### Part 1 – Preprocessing
 
 - Import the dataset into the `data/` directory  
-  - Training data: `train_data`
-  - Testing data: `test_data`
+  - The folder that contains single defect images: `single_defect_images`
+  - The folder that contains multiple defect images: `multiple_defect_images`
 - Run `data_splitter.py` to generate train, validation, and test splits
-- Run the **first six cells** in `training_loop.ipynb` to complete preprocessing
+- Run the **first six cells** in `main.ipynb` to complete preprocessing
 
 ### Part 2 – Hyperparameter Tuning
 
-- Run the **next three cells** in `training_loop.ipynb` to perform hyperparameter tuning
+- Run the **next three cells** in `main.ipynb` to perform hyperparameter tuning
 
 ### Part 3 – Training and Validation
 
-- Run the **next three cells** in `training_loop.ipynb` to:
+- Run the **next three cells** in `main.ipynb` to:
   - Set up the training configuration
   - Train the baseline model
   - Evaluate performance on the validation dataset
 
 ### Part 4 – Testing and Evaluation
 
-- Run the remaining cells in `training_loop.ipynb` to:
+- Run the remaining cells in `main.ipynb` to:
   - Evaluate the final model on the test set
   - Generate quantitative metrics and qualitative results
 - Final metrics are stored in:

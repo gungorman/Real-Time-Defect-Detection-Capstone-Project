@@ -219,8 +219,8 @@ def summarize(records, name):
 
 def main():
     # ---- HARD-CODE YOUR PATHS HERE ----
-    train_root = Path(r"data/train_data")   # original training dataset root
-    test_root  = Path(r"data/test_data")    # original test dataset root
+    train_root = Path(r"data/single_defect_images")   # original training dataset root
+    test_root  = Path(r"data/multiple_defect_images")    # original test dataset root
     out_root   = Path(r"data")              # output dataset root
 
     seed = 42
