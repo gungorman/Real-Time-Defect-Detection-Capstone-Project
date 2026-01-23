@@ -147,6 +147,7 @@ The experiments in this project were conducted using the following hardware and 
 
 ### Part 1 – Preprocessing
 
+- Extract the `dataset.zip` file. It should contain two folders namely: `single_defect_images` and `multiple_defect_images`
 - Import the dataset into the `data/` directory  
   - The folder that contains single defect images: `single_defect_images`
   - The folder that contains multiple defect images: `multiple_defect_images`
