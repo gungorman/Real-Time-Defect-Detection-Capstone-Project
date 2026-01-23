@@ -220,7 +220,7 @@ These visualizations demonstrate the model’s ability to localize and classify 
 
 - Ultralytics YOLOv8 framework
 - Project supervisors, dataset contributors and teaching assistants
-  - Shanta Kalimbi
+  - Shantha Kilambi
   - Madalina Fron
 
 This project is made by:
