@@ -125,7 +125,7 @@ The experiments in this project were conducted using the following hardware and 
 ### Hardware
 
 - GPU: NVIDIA GeForce RTX 4060 Laptop GPU (8 GB VRAM)
-- CPU: x86_64 architecture
+- CPU: 12th Gen Intel(R) Core(TM) i7-12650H (2.30 GHz)
 - RAM: 32 GB
 
 ### Software
@@ -140,7 +140,6 @@ The experiments in this project were conducted using the following hardware and 
 
 - GPU acceleration is required for efficient training and inference.
 - All experiments were run using the Ultralytics Python API.
-- Validation and test metrics follow the COCO evaluation protocol.
 
 ---
 
@@ -151,12 +150,13 @@ The experiments in this project were conducted using the following hardware and 
 - Import the dataset into the `data/` directory  
   - The folder that contains single defect images: `single_defect_images`
   - The folder that contains multiple defect images: `multiple_defect_images`
-- Run `data_splitter.py` to generate train, validation, and test splits
-- Run the **first six cells** in `main.ipynb` to complete preprocessing
+- Run `data_splitter.py` to generate train, validation, and test splits. The folders would be now called: `train`, `val` and `test` respectfully
+- Run the **first six cells** in `main.ipynb` to complete preprocessing. This step would initialize the python environment and crate `data.yaml` configuration file that would be used by the YOLO model.
 
 ### Part 2 – Hyperparameter Tuning
 
 - Run the **next three cells** in `main.ipynb` to perform hyperparameter tuning
+- There should be two folders created under `runs/` regarding the grid-search process
 
 ### Part 3 – Training and Validation
 
@@ -164,6 +164,10 @@ The experiments in this project were conducted using the following hardware and 
   - Set up the training configuration
   - Train the baseline model
   - Evaluate performance on the validation dataset
+- The training results should be accessible in:
+  - `runs/detect/train_final`
+- The predictions on the validation dataset could be found under:
+  - `runs/detect/val`
 
 ### Part 4 – Testing and Evaluation
 
