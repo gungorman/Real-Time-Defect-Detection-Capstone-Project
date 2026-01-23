@@ -1,15 +1,6 @@
 data/*
 !data/.gitkeep
 
-runs/**
-!runs/**/.gitkeep
-
-runs/gridsearch_final/**
-!runs/gridsearch_final/.gitkeep
-
-runs/gridsearch_final_new/**
-!runs/gridsearch_final_new/.gitkeep
-
 *.csv
 *.h5
 *.ckpt
