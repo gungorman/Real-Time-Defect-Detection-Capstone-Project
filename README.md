@@ -1,6 +1,6 @@
 # Real-Time-Defect-Detection-Capstone-Project
 
-YOLOv8-based object detection system for identifying common FDM print defects in real time.
+YOLOv8-based object detection system for identifying common FFF print defects in real time.
 
 ---
 
